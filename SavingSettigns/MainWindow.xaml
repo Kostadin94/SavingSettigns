@@ -1,0 +1,68 @@
+﻿<Window x:Class="SavingSettigns.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22"/>
+            <RowDefinition Height="22"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!-- <Grid.ColumnDefinitions>
+         <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5"/>
+        </Grid.ColumnDefinitions>-->
+        <Border Grid.Row="0" BorderBrush="AliceBlue" BorderThickness="0 0 0 1" Background="AliceBlue" >
+            <Menu Padding="0" IsMainMenu="True" VerticalAlignment="Center" Background="Transparent">
+                <MenuItem Header="File" Name="FileMenu">
+                    <MenuItem Header="Save settings" Name="SaveMenu" Click="SaveMenu_Click"/>
+                    <MenuItem Header="Logout" Name="Logout" Click="Logout_Click"/>
+                </MenuItem>
+            </Menu>
+          </Border>
+        <TextBlock Grid.Row="1" Name="tbUser" FontSize="20" />
+        <StackPanel Grid.Row="2">
+            <TextBox Name="tb1" Height="100">                
+            </TextBox>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <RadioButton GroupName="Radios" Checked="radiosButton_Checked" Name="radioButton1" >
+                Radio 1
+            </RadioButton>
+                <RadioButton GroupName="Radios" Checked="radiosButton_Checked" Grid.Column="1" Name="radioButton2" >
+                Radio 2
+            </RadioButton>
+                <RadioButton GroupName="Radios" Checked="radiosButton_Checked" Grid.Column="2" Name="radioButton3" >
+                Radio 3
+            </RadioButton>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <CheckBox Name="checkBox1" Unchecked="checkBox_Unchecked" Checked="checkBox_Checked">Checkbox1</CheckBox>
+                    <CheckBox Name="checkBox2" Unchecked="checkBox_Unchecked" Checked="checkBox_Checked">Checkbox2</CheckBox>
+                    <CheckBox Name="checkBox3" Unchecked="checkBox_Unchecked" Checked="checkBox_Checked">Checkbox3</CheckBox>
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <CheckBox Name="checkBox4" Unchecked="checkBox_Unchecked" Checked="checkBox_Checked">Checkbox4</CheckBox>
+                    <CheckBox Name="checkBox5" Unchecked="checkBox_Unchecked" Checked="checkBox_Checked">Checkbox5</CheckBox>
+                    <CheckBox Name="checkBox6"  Unchecked="checkBox_Unchecked" Checked="checkBox_Checked">Checkbox6</CheckBox>
+                </StackPanel>
+            </Grid>
+            <ComboBox Name="comboBox1" SelectionChanged="comboBox1_SelectionChanged">
+                <ComboBoxItem>Option 1</ComboBoxItem>
+                <ComboBoxItem>Option 2</ComboBoxItem>
+                <ComboBoxItem>Option 3</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+    </Grid>
+</Window>
